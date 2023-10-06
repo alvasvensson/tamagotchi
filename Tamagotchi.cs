@@ -3,15 +3,22 @@ public class Tamagotchi
 {
     private int hunger;
     private int boredom;
-    private List<string> words;
-    private bool isAlive;
-    private Random generator;
+    private List<string> words = new List<string>() { "Hewwo" };
+    private bool isAlive = true;
+    private Random generator = new();
     public string Name;
 
 
     public void Feed()
     {
-        hunger = -1;
+        if (hunger > 0)
+        {
+            hunger -= 2;
+        }
+        else
+        {
+            Console.WriteLine("Your tamagotchi is already full!");
+        }
         PrintStats();
     }
 
@@ -19,14 +26,13 @@ public class Tamagotchi
     {
         ReduceBoredom();
         int wordNum = generator.Next(words.Count);
-        Console.WriteLine($"{Name} says {wordNum}");
-        Console.ReadLine();
+        Console.WriteLine($"{Name} says {words[wordNum]}");
 
     }
     public void Teach(string word)
     {
-        ReduceBoredom();
         words.Add(word);
+        ReduceBoredom();
     }
 
     public void Tick()
@@ -48,11 +54,21 @@ public class Tamagotchi
 
     public bool GetAlive()
     {
-        return true;
+        if (!isAlive)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     private void ReduceBoredom()
     {
-        boredom = -1;
+        if (boredom > 0)
+        {
+            boredom -= 2;
+        }
     }
 }

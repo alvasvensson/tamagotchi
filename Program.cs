@@ -3,7 +3,7 @@
 Tamagotchi myTama = new();
 
 
-Console.WriteLine("What do you want to name yout Tamagotchi?");
+Console.WriteLine("What do you want to name your Tamagotchi?");
 myTama.Name = Console.ReadLine();
 
 while (myTama.GetAlive() == true)
@@ -18,25 +18,24 @@ while (myTama.GetAlive() == true)
     if (reply == "1")
     {
         myTama.Feed();
-        myTama.Tick();
     }
 
     if (reply == "2")
     {
         Console.WriteLine("what word do you want to teach?");
-        string wordToTeach = Console.ReadLine();
-        myTama.Teach(wordToTeach);
-        myTama.Tick();
+        string word = Console.ReadLine();
+        myTama.Teach(word);
     }
 
     if (reply == "3")
     {
         myTama.Hi();
-        myTama.Tick();
     }
+
+    myTama.Tick();
 
 }
 
-
+Console.WriteLine("oh no you tamagotchi died! GAME OVER");
 
 Console.ReadLine();
