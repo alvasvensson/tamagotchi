@@ -50,6 +50,13 @@ public class Tamagotchi
         Console.WriteLine($"hunger: {hunger}");
         Console.WriteLine($"boredom: {boredom}");
         Console.WriteLine($"alive: {isAlive}");
+        Console.WriteLine("  .^._.^.");
+        Console.WriteLine("  | . . |");
+        Console.WriteLine(" (  ---  )");
+        Console.WriteLine(" .'     '.");
+        Console.WriteLine(@" |/     \|");
+        Console.WriteLine(@"  \ /-\ /");
+        Console.WriteLine("   V   V");
     }
 
     public bool GetAlive()

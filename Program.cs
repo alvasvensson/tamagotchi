@@ -4,6 +4,13 @@ Tamagotchi myTama = new();
 
 
 Console.WriteLine("What do you want to name your Tamagotchi?");
+Console.WriteLine("  .^._.^.");
+Console.WriteLine("  | . . |");
+Console.WriteLine(" (  ---  )");
+Console.WriteLine(" .'     '.");
+Console.WriteLine(@" |/     \|");
+Console.WriteLine(@"  \ /-\ /");
+Console.WriteLine("   V   V");
 myTama.Name = Console.ReadLine();
 
 while (myTama.GetAlive() == true)
@@ -36,6 +43,13 @@ while (myTama.GetAlive() == true)
 
 }
 
+Console.WriteLine("  .^._.^.");
+Console.WriteLine("  | x x |");
+Console.WriteLine(" (  ---  )");
+Console.WriteLine(" .'     '.");
+Console.WriteLine(@" |/     \|");
+Console.WriteLine(@"  \ /-\ /");
+Console.WriteLine("   V   V");
 Console.WriteLine("oh no you tamagotchi died! GAME OVER");
 
 Console.ReadLine();
